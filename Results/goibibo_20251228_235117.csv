@@ -1,0 +1,55 @@
+source,airline,flight_code,departure,arrival,duration,stops,price,timestamp
+Goibibo,Akasa Air,QP 1812,22:55,02:00,03 h 05 m,Non stop,7018,2025-12-28T23:48:56.854476
+Goibibo,IndiGo,,18:45,00:15,05 h 30 m,1 stop via Nagpur,7070,2025-12-28T23:48:56.888022
+Goibibo,Air India Express,,09:55,16:40,06 h 45 m,1 stop via Pune,7117,2025-12-28T23:48:56.908193
+Goibibo,IndiGo,,05:30,08:25,02 h 55 m,Non stop,7121,2025-12-28T23:48:56.925490
+Goibibo,IndiGo,,20:00,23:00,03 h,Non stop,7121,2025-12-28T23:48:56.942104
+Goibibo,IndiGo,,21:30,00:25,02 h 55 m,Non stop,7121,2025-12-28T23:48:56.961074
+Goibibo,Air India,AI 2803,06:30,09:25,02 h 55 m,Non stop,7171,2025-12-28T23:48:56.978807
+Goibibo,IndiGo,,04:45,10:00,05 h 15 m,1 stop via Hyderabad,7173,2025-12-28T23:48:57.000773
+Goibibo,Air India,AI 2653,04:30,07:20,02 h 50 m,Non stop,7221,2025-12-28T23:48:57.137043
+Goibibo,Air India,AI 2815,07:05,09:45,02 h 40 m,Non stop,7221,2025-12-28T23:48:57.155124
+Goibibo,Air India,AI 2512,19:00,22:00,03 h,Non stop,7221,2025-12-28T23:48:57.171040
+Goibibo,Air India,AI 2809,19:30,22:25,02 h 55 m,Non stop,7221,2025-12-28T23:48:57.188384
+Goibibo,Air India,AI 2807,20:00,23:00,03 h,Non stop,7221,2025-12-28T23:48:57.204312
+Goibibo,Air India,AI 2412,21:30,00:30,03 h,Non stop,7221,2025-12-28T23:48:57.221006
+Goibibo,SpiceJet,SG 142,22:00,00:50,02 h 50 m,Non stop,7303,2025-12-28T23:48:57.238682
+Goibibo,IndiGo,,07:05,09:55,02 h 50 m,Non stop,7537,2025-12-28T23:48:57.256627
+Goibibo,IndiGo,,08:00,10:55,02 h 55 m,Non stop,7537,2025-12-28T23:48:57.274495
+Goibibo,IndiGo,,18:00,20:55,02 h 55 m,Non stop,7537,2025-12-28T23:48:57.292427
+Goibibo,IndiGo,,19:00,21:55,02 h 55 m,Non stop,7537,2025-12-28T23:48:57.310360
+Goibibo,IndiGo,,23:00,01:55,02 h 55 m,Non stop,7537,2025-12-28T23:48:57.326828
+Goibibo,Air India,AI 2757,00:15,03:10,02 h 55 m,Non stop,7610,2025-12-28T23:48:57.344443
+Goibibo,Air India,AI 507,03:20,05:50,02 h 30 m,Non stop,7610,2025-12-28T23:48:57.364459
+Goibibo,Air India,AI 2651,08:00,10:55,02 h 55 m,Non stop,7610,2025-12-28T23:48:57.385597
+Goibibo,Air India,AI 427,08:30,11:20,02 h 50 m,Non stop,7610,2025-12-28T23:48:57.404587
+Goibibo,Air India,AI 2813,18:00,21:00,03 h,Non stop,7701,2025-12-28T23:48:57.426178
+Goibibo,IndiGo,,15:30,21:45,06 h 15 m,1 stop via Hyderabad,7831,2025-12-28T23:48:57.451700
+Goibibo,Akasa Air,QP 1350,20:50,23:50,03 h,Non stop,7953,2025-12-28T23:48:57.476174
+Goibibo,IndiGo,,04:45,09:15,04 h 30 m,1 stop via Hyderabad,7976,2025-12-28T23:48:57.517817
+Goibibo,IndiGo,,09:15,12:15,03 h,Non stop,7981,2025-12-28T23:48:57.533091
+Goibibo,IndiGo,,11:45,14:45,03 h,Non stop,7981,2025-12-28T23:48:57.550599
+Goibibo,IndiGo,,16:45,19:50,03 h 05 m,Non stop,7981,2025-12-28T23:48:57.568208
+Goibibo,Air India,AI 2415,09:30,12:25,02 h 55 m,Non stop,8083,2025-12-28T23:48:57.585219
+Goibibo,Air India,AI 2817,16:30,19:15,02 h 45 m,Non stop,8083,2025-12-28T23:48:57.600676
+Goibibo,Air India,AI 2600,17:00,19:55,02 h 55 m,Non stop,8083,2025-12-28T23:48:57.617123
+Goibibo,Air India Express,IX 1507,15:25,18:20,02 h 55 m,Non stop,8106,2025-12-28T23:48:57.633841
+Goibibo,Air India Express,IX 1056,22:20,01:15,02 h 55 m,Non stop,8106,2025-12-28T23:48:57.651133
+Goibibo,IndiGo,,14:15,16:55,02 h 40 m,Non stop,8182,2025-12-28T23:48:57.692609
+Goibibo,Akasa Air,QP 1824,19:55,22:50,02 h 55 m,Non stop,8338,2025-12-28T23:48:57.713037
+Goibibo,IndiGo,,10:30,13:25,02 h 55 m,Non stop,8451,2025-12-28T23:48:57.758442
+Goibibo,IndiGo,,13:00,15:55,02 h 55 m,Non stop,8451,2025-12-28T23:48:57.774514
+Goibibo,IndiGo,,14:15,17:10,02 h 55 m,Non stop,8451,2025-12-28T23:48:57.791061
+Goibibo,IndiGo,,15:30,18:30,03 h,Non stop,8451,2025-12-28T23:48:57.807377
+Goibibo,SpiceJet,SG 760,14:25,17:15,02 h 50 m,Non stop,8472,2025-12-28T23:48:57.824713
+Goibibo,IndiGo,,02:15,07:30,05 h 15 m,1 stop via Pune,8555,2025-12-28T23:48:57.845574
+Goibibo,Air India,AI 2485,10:30,13:20,02 h 50 m,Non stop,8969,2025-12-28T23:48:57.960764
+Goibibo,Air India,AI 2819,15:00,17:55,02 h 55 m,Non stop,8969,2025-12-28T23:48:57.978328
+Goibibo,IndiGo,,18:30,23:35,05 h 05 m,1 stop via Hyderabad,9955,2025-12-28T23:48:57.999487
+Goibibo,IndiGo,,18:30,23:35,05 h 05 m,1 stop via Hyderabad,9087,2025-12-28T23:48:58.029974
+Goibibo,Akasa Air,QP 1335,14:50,17:35,02 h 45 m,Non stop,10000,2025-12-28T23:48:58.126458
+Goibibo,IndiGo,,17:15,22:50,05 h 35 m,1 stop via Goa (North),10708,2025-12-28T23:48:58.165293
+Goibibo,IndiGo,,17:15,22:50,05 h 35 m,1 stop via Goa (North),10053,2025-12-28T23:48:58.196464
+Goibibo,Air India,AI 2417,13:00,15:55,02 h 55 m,Non stop,11277,2025-12-28T23:48:58.309613
+Goibibo,Air India Express,IX 2964,14:45,17:40,02 h 55 m,Non stop,12421,2025-12-28T23:48:58.327363
+Goibibo,Air India Express,IX 2679,21:10,00:05,02 h 55 m,Non stop,12553,2025-12-28T23:48:58.344844

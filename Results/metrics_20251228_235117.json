@@ -1,0 +1,128 @@
+{
+  "cheapest_overall": {
+    "source": "MakeMyTrip",
+    "airline": "Akasa Air",
+    "flight_code": "QP 1812",
+    "departure": "22:55",
+    "arrival": "02:00",
+    "duration": "03 h 05 m",
+    "stops": "Non stop",
+    "price": 7018,
+    "timestamp": "2025-12-28T23:45:51.540162"
+  },
+  "shortest_duration": {
+    "source": "MakeMyTrip",
+    "airline": "Air India",
+    "flight_code": "AI 507",
+    "departure": "03:20",
+    "arrival": "05:50",
+    "duration": "02 h 30 m",
+    "stops": "Non stop",
+    "price": 7610,
+    "timestamp": "2025-12-28T23:45:54.437831",
+    "duration_minutes": 150
+  },
+  "best_value": {
+    "source": "MakeMyTrip",
+    "airline": "IndiGo",
+    "flight_code": "6E 6833",
+    "departure": "05:30",
+    "arrival": "08:25",
+    "duration": "02 h 55 m",
+    "stops": "Non stop",
+    "price": 7121,
+    "timestamp": "2025-12-28T23:45:51.958870",
+    "duration_minutes": 175
+  },
+  "cheapest_per_airline": {
+    "Akasa Air": {
+      "price": 7018,
+      "departure": "22:55",
+      "arrival": "02:00",
+      "source": "MakeMyTrip"
+    },
+    "IndiGo": {
+      "price": 7070,
+      "departure": "18:45",
+      "arrival": "00:15",
+      "source": "MakeMyTrip"
+    },
+    "Air India Express": {
+      "price": 7117,
+      "departure": "09:55",
+      "arrival": "16:40",
+      "source": "MakeMyTrip"
+    },
+    "Air India": {
+      "price": 7171,
+      "departure": "06:30",
+      "arrival": "09:25",
+      "source": "MakeMyTrip"
+    },
+    "SpiceJet": {
+      "price": 7303,
+      "departure": "22:00",
+      "arrival": "00:50",
+      "source": "MakeMyTrip"
+    },
+    "Star Air": {
+      "price": 8096,
+      "departure": "16:10",
+      "arrival": "20:00",
+      "source": "Cleartrip"
+    }
+  },
+  "cheapest_per_source": {
+    "MakeMyTrip": {
+      "price": 7018,
+      "airline": "Akasa Air",
+      "departure": "22:55",
+      "arrival": "02:00"
+    },
+    "Cleartrip": {
+      "price": 7173,
+      "airline": "IndiGo",
+      "departure": "04:45",
+      "arrival": "10:40"
+    },
+    "Goibibo": {
+      "price": 9955,
+      "airline": "IndiGo",
+      "departure": "18:30",
+      "arrival": "23:35"
+    }
+  },
+  "price_stats": {
+    "min": 7018,
+    "max": 30642,
+    "mean": 12077.65,
+    "median": 10947,
+    "std": 4449.54
+  },
+  "stop_analysis": {
+    "counts": {
+      "non_stop": 44,
+      "1 stop via Nagpur": 1,
+      "1 stop via Pune": 2,
+      "1 stop via Hyderabad": 5,
+      "1 stop": 167,
+      "2 stops": 1,
+      "1 stop via Goa (Nort": 2
+    },
+    "min_prices": {
+      "non_stop": 7018,
+      "1 stop via Nagpur": 7070,
+      "1 stop via Pune": 7117,
+      "1 stop via Hyderabad": 7173,
+      "1 stop": 7173,
+      "2 stops": 8557,
+      "1 stop via Goa (Nort": 10053
+    }
+  },
+  "summary": {
+    "total_flights": 222,
+    "unique_airlines": 6,
+    "sources_count": 3,
+    "timestamp": "20251228_235117"
+  }
+}

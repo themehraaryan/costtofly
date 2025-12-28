@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CostToFly - Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container results-page">
+        <header>
+            <h1>CostToFly</h1>
+            <a href="/" class="back-link">← New Search</a>
+        </header>
+
+        <section class="search-info">
+            <p><strong>{{ input_data.get('departure', 'N/A') }}</strong> → <strong>{{ input_data.get('arrival', 'N/A') }}</strong> | {{ input_data.get('date', 'N/A') }}</p>
+            <p class="total">{{ total_flights }} flights found</p>
+        </section>
+
+        {% if metrics %}
+        <section class="metrics-section">
+            <h2>Key Metrics</h2>
+            <div class="metrics-grid">
+                {% if metrics.cheapest_overall %}
+                <div class="metric-card highlight">
+                    <h3>Cheapest Flight</h3>
+                    <p class="price">₹{{ "{:,}".format(metrics.cheapest_overall.price|int) }}</p>
+                    <p>{{ metrics.cheapest_overall.airline }}</p>
+                    <p class="detail">{{ metrics.cheapest_overall.departure }} → {{ metrics.cheapest_overall.arrival }}</p>
+                </div>
+                {% endif %}
+
+                {% if metrics.shortest_duration %}
+                <div class="metric-card">
+                    <h3>Shortest Duration</h3>
+                    <p class="duration">{{ metrics.shortest_duration.duration }}</p>
+                    <p>{{ metrics.shortest_duration.airline }}</p>
+                    <p class="price-small">₹{{ "{:,}".format(metrics.shortest_duration.price|int) }}</p>
+                </div>
+                {% endif %}
+
+                {% if metrics.best_value %}
+                <div class="metric-card">
+                    <h3>Best Value</h3>
+                    <p class="price">₹{{ "{:,}".format(metrics.best_value.price|int) }}</p>
+                    <p>{{ metrics.best_value.duration }}</p>
+                    <p>{{ metrics.best_value.airline }}</p>
+                </div>
+                {% endif %}
+
+                {% if metrics.price_stats %}
+                <div class="metric-card">
+                    <h3>Price Range</h3>
+                    <p>Min: ₹{{ "{:,}".format(metrics.price_stats.min|int) }}</p>
+                    <p>Median: ₹{{ "{:,}".format(metrics.price_stats.median|int) }}</p>
+                    <p>Max: ₹{{ "{:,}".format(metrics.price_stats.max|int) }}</p>
+                </div>
+                {% endif %}
+            </div>
+
+            {% if metrics.cheapest_per_source %}
+            <div class="source-comparison">
+                <h3>Cheapest by Source</h3>
+                <div class="source-cards">
+                    {% for source, data in metrics.cheapest_per_source.items() %}
+                    <div class="source-card">
+                        <span class="source-name">{{ source }}</span>
+                        <span class="source-price">₹{{ "{:,}".format(data.price|int) }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </section>
+        {% endif %}
+
+        {% if charts %}
+        <section class="charts-section">
+            <h2>Visualizations</h2>
+            <div class="charts-grid">
+                {% for chart in charts %}
+                <div class="chart-card">
+                    <img src="/charts/{{ chart }}" alt="Chart" loading="lazy">
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {% if flights %}
+        <section class="flights-section">
+            <h2>All Flights</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Airline</th>
+                            <th>Flight</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Duration</th>
+                            <th>Stops</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for flight in flights %}
+                        <tr>
+                            <td>{{ flight.source }}</td>
+                            <td>{{ flight.airline }}</td>
+                            <td>{{ flight.flight_code or '-' }}</td>
+                            <td>{{ flight.departure }}</td>
+                            <td>{{ flight.arrival }}</td>
+                            <td>{{ flight.duration or '-' }}</td>
+                            <td>{{ flight.stops }}</td>
+                            <td class="price-cell">₹{{ "{:,}".format(flight.price|int) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        {% else %}
+        <section class="no-results">
+            <p>No flights found. Try a different search.</p>
+        </section>
+        {% endif %}
+
+        <footer>
+            <p>Data from MakeMyTrip, Goibibo, Cleartrip</p>
+        </footer>
+    </div>
+</body>
+</html>

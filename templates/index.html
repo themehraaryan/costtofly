@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CostToFly - Flight Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CostToFly</h1>
+            <p class="subtitle">Compare flight prices across multiple sources</p>
+        </header>
+
+        <main>
+            <form id="search-form" class="search-form">
+                <div class="form-group">
+                    <label for="departure">Departure City Code</label>
+                    <input type="text" id="departure" name="departure" 
+                           placeholder="DEL" maxlength="3" required
+                           value="{{ current_input.get('departure', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="arrival">Arrival City Code</label>
+                    <input type="text" id="arrival" name="arrival" 
+                           placeholder="BLR" maxlength="3" required
+                           value="{{ current_input.get('arrival', '') }}">
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Travel Date</label>
+                    <input type="text" id="date" name="date" 
+                           placeholder="DD/MM/YYYY" required
+                           value="{{ current_input.get('date', '') }}">
+                </div>
+
+                <button type="submit" id="search-btn">Search Flights</button>
+            </form>
+
+            <div id="status" class="status hidden"></div>
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p>Searching flights... This may take a few minutes.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Searches MakeMyTrip, Goibibo, and Cleartrip</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('search-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const btn = document.getElementById('search-btn');
+            const loader = document.getElementById('loader');
+            const status = document.getElementById('status');
+            
+            btn.disabled = true;
+            btn.textContent = 'Searching...';
+            loader.classList.remove('hidden');
+            status.classList.add('hidden');
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch('/search', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    window.location.href = data.redirect;
+                } else {
+                    status.textContent = data.error || 'Search failed';
+                    status.classList.remove('hidden');
+                    status.classList.add('error');
+                }
+            } catch (err) {
+                status.textContent = 'Network error. Please try again.';
+                status.classList.remove('hidden');
+                status.classList.add('error');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Search Flights';
+                loader.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
